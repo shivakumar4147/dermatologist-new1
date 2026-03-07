@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://skin360clinic.com/sitemap.xml
