@@ -1254,6 +1254,113 @@ p {
   border-radius: 32px;
   border: 1px solid rgba(212, 163, 115, 0.1);
 }
+.infrastructure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+.infra-card {
+  text-align: center;
+}
+.infra-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--blue-50-light);
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+.infra-card h3 {
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.infra-card p {
+  color: var(--muted);
+}
+
+.expertise-section {
+  background: var(--blue-50-light);
+  border-radius: 40px;
+  padding: 5rem;
+  margin: 5rem 0;
+}
+.expertise-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-top: 3rem;
+}
+@media (max-width: 768px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+  .expertise-section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+.trust-badges-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 4rem;
+  padding: 3rem;
+  background: var(--white);
+  border-radius: 24px;
+  box-shadow: 0 10px 40px var(--shadow);
+}
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
+  width: 180px;
+}
+.badge-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-50-light);
+  color: var(--blue);
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+.badge-item span {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.cert-grid {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 3rem;
+  opacity: 0.7;
+  filter: grayscale(1);
+  transition: 0.3s ease;
+}
+.cert-grid:hover {
+  opacity: 1;
+  filter: grayscale(0);
+}
+.cert-item {
+  font-weight: 800;
+  color: var(--muted);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 .results-cta {
   text-align: center;
   margin-top: 3rem;

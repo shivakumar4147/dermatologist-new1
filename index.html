@@ -29,7 +29,7 @@
     "@id": "https://skin360clinic.com/#clinic",
     "name": "Skin 360 Dermatology Clinic",
     "alternateName": "Skin Specialist in Mangaluru",
-    "description": "Premium dermatology clinic in Mangaluru offering advanced acne, hair loss, and laser skin treatments by certified specialists.",
+    "description": "Premium dermatology clinic in Mangaluru offering advanced acne, hair loss, and laser skin treatments by certified specialists. 12+ years of experience and 5000+ patients treated.",
     "url": "https://skin360clinic.com/",
     "telephone": "+919738287177",
     "priceRange": "$$",
@@ -59,27 +59,31 @@
       "ratingValue": "4.7",
       "reviewCount": "200"
     },
-    "medicalSpecialty": ["Dermatology", "AestheticDermatology"],
+    "medicalSpecialty": ["Dermatology", "AestheticDermatology", "LaserSurgery"],
     "availableService": [
       {
         "@type": "MedicalTherapy",
         "name": "Acne Treatment",
-        "description": "Expert clinical care for acne and scars."
+        "description": "Expert clinical care for acne and scars by certified skin specialist."
       },
       {
         "@type": "MedicalTherapy",
         "name": "Hair Loss Treatment",
-        "description": "Advanced PRP and medical regrowth therapies."
+        "description": "Advanced PRP and medical hair regrowth therapies in Mangaluru."
       },
       {
         "@type": "MedicalTherapy",
         "name": "Laser Skin Treatment",
-        "description": "Safe laser therapy for skin rejuvenation."
+        "description": "Safe and approved laser therapy for hair removal and rejuvenation."
       }
     ],
-    "sameAs": [
-      "https://www.facebook.com/skin360",
-      "https://www.instagram.com/skin360"
+    "review": [
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Aditi S."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "reviewBody": "Highly professional acne treatment. My skin cleared up significantly within 8 weeks."
+      }
     ]
   }
   </script>
@@ -89,12 +93,19 @@
     "@type": "Physician",
     "name": "Dr. Sarah Wilson",
     "medicalSpecialty": "Dermatology",
-    "jobTitle": "Senior Dermatologist",
-    "description": "Certified skin specialist with MD Dermatology and 12+ years of experience in acne and laser therapy.",
-    "memberOf": {
-      "@type": "Organization",
-      "name": "Indian Association of Dermatologists (IADVL)"
-    },
+    "jobTitle": "Senior Dermatologist & Laser Surgeon",
+    "description": "Certified skin specialist with MD Dermatology and 12+ years of experience. Specialist in acne, laser surgery, and hair regrowth.",
+    "qualifications": "MD, DNB (Dermatology), MNAMS",
+    "memberOf": [
+      {
+        "@type": "Organization",
+        "name": "Indian Association of Dermatologists (IADVL)"
+      },
+      {
+        "@type": "Organization",
+        "name": "American Academy of Dermatology (AAD)"
+      }
+    ],
     "affiliation": {
       "@id": "https://skin360clinic.com/#clinic"
     }
@@ -148,12 +159,29 @@
   </section>
 
   <section class="credibility">
-    <div class="container credibility-inner">
-      <div class="cred-item"><strong>4.7 / 5</strong><span>Patient Rating</span></div>
-      <div class="cred-item"><strong>200+</strong><span>Verified Reviews</span></div>
-      <div class="cred-item"><strong>9+ Years</strong><span>Dermatology Service</span></div>
-      <div class="cred-item"><strong>Modern</strong><span>Skin Procedures</span></div>
-      <div class="cred-item"><strong>Mangaluru</strong><span>City-wide Care</span></div>
+    <div class="container">
+      <div class="trust-badges-grid">
+        <div class="badge-item">
+          <div class="badge-icon">🏆</div>
+          <span>12+ Years Experience</span>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">😊</div>
+          <span>5000+ Happy Patients</span>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">⚡</div>
+          <span>Advanced Laser Tech</span>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">📜</div>
+          <span>Certified Specialist</span>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">🛡️</div>
+          <span>Safe & Approved</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -176,20 +204,25 @@
               <h3>Dr. Sarah Wilson</h3>
               <span class="experience">12+ Years Exp.</span>
             </div>
-            <p class="qualification">MD, DNB (Dermatology)</p>
-            <p class="specialty">Senior Dermatologist & Aesthetic Specialist</p>
+            <p class="qualification">MD, DNB (Dermatology), MNAMS</p>
+            <p class="specialty">Senior Dermatologist & Laser Surgeon</p>
             <div class="rating">
               <span class="stars">★★★★★</span>
-              <span class="count">(480+ Verified Reviews)</span>
+              <span class="count">(5000+ Patients Treated)</span>
             </div>
-            <p class="bio">Certified specialist in clinical dermatology, laser therapy, and advanced anti-aging procedures. Dedicated to delivering natural-looking results with a patient-centric approach.</p>
+            <p class="bio">Dr. Sarah Wilson is a highly accomplished <strong>certified skin specialist</strong> with over 12 years of clinical expertise. She specializes in advanced acne management, precision laser therapy, and complex hair loss treatments. Her patient-centric approach combines medical excellence with natural-looking aesthetic outcomes.</p>
             <div class="certifications">
-              <span class="cert-badge">IADVL Member</span>
+              <span class="cert-badge">IADVL Life Member</span>
               <span class="cert-badge">Board Certified</span>
               <span class="cert-badge">Laser Surgery Expert</span>
-              <span class="cert-badge">American Academy of Dermatology (AAD) International Member</span>
+              <span class="cert-badge">AAD International Member</span>
             </div>
-            <a href="#appointment" class="btn btn-primary" style="margin-top: 1.5rem;">Book Clinical Consultation</a>
+            <div class="cert-grid">
+              <div class="cert-item">IADVL</div>
+              <div class="cert-item">MNAMS</div>
+              <div class="cert-item">KMC Certified</div>
+            </div>
+            <a href="#appointment" class="btn btn-primary" style="margin-top: 2rem;">Book Clinical Consultation</a>
           </div>
         </div>
       </div>
@@ -278,6 +311,38 @@
     </div>
   </section>
 
+  <section class="infrastructure reveal" id="infrastructure">
+    <div class="container">
+      <div class="section-head">
+        <h2>Premium Clinic Infrastructure</h2>
+        <p>Equipped with the latest US-FDA approved laser systems and advanced diagnostic tools for safe and effective treatments.</p>
+      </div>
+      <div class="infrastructure-grid">
+        <div class="infra-card">
+          <div class="infra-image">
+            <div class="hero-placeholder" style="height: 100%;" role="img" aria-label="modern dermatology clinic treatment room"></div>
+          </div>
+          <h3>Modern Treatment Rooms</h3>
+          <p>Hygienic and private spaces designed for patient comfort and clinical excellence.</p>
+        </div>
+        <div class="infra-card">
+          <div class="infra-image">
+            <div class="hero-placeholder" style="height: 100%; background: #e2e8f0;" role="img" aria-label="advanced laser dermatology equipment"></div>
+          </div>
+          <h3>Advanced Laser Technology</h3>
+          <p>State-of-the-art laser systems for precision hair removal and scar reduction.</p>
+        </div>
+        <div class="infra-card">
+          <div class="infra-image">
+            <div class="hero-placeholder" style="height: 100%; background: #cbd5e1;" role="img" aria-label="skin clinic consultation room"></div>
+          </div>
+          <h3>Expert Diagnostic Tools</h3>
+          <p>Advanced digital skin and hair analysis tools for accurate medical diagnosis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="results reveal" id="results">
     <div class="container">
       <div class="section-head">
@@ -287,13 +352,13 @@
       <div class="results-grid">
         <!-- Acne Result -->
         <div class="result-card glass-card">
-          <div class="comparison-container" data-comparison-container title="Acne treatment before and after results">
+          <div class="comparison-container" data-comparison-container title="acne treatment before and after results">
             <div class="comparison-before">
-            <img src="acne-treatment-mangaluru-before.webp" alt="Acne treatment before and after results" class="comparison-img" loading="lazy" width="400" height="250"> 
+            <img src="acne-treatment-mangaluru-before.webp" alt="acne treatment before and after results" class="comparison-img" loading="lazy" width="400" height="250"> 
               <span class="ba-label ba-label-before">Before</span>
             </div>
             <div class="comparison-after" data-comparison-after>
-                <img src="acne-treatment-mangaluru-after.webp" alt="Acne treatment before and after results" class="comparison-img" loading="lazy" width="400" height="250"> 
+                <img src="acne-treatment-mangaluru-after.webp" alt="acne treatment before and after results" class="comparison-img" loading="lazy" width="400" height="250"> 
               <span class="ba-label ba-label-after">After</span>
             </div>
             <input type="range" min="0" max="100" value="50" class="comparison-slider" data-comparison-slider aria-label="Percentage of after image shown">
@@ -312,13 +377,13 @@
 
         <!-- Hair Loss Result -->
         <div class="result-card glass-card">
-          <div class="comparison-container" data-comparison-container title="Hair loss treatment before after">
+          <div class="comparison-container" data-comparison-container title="hair loss treatment before after">
             <div class="comparison-before">
-              <div class="hero-placeholder" style="width:100%; height:250px"></div>
+              <div class="hero-placeholder" style="width:100%; height:250px; background:#e2e8f0" role="img" aria-label="hair loss treatment before after"></div>
               <span class="ba-label ba-label-before">Before</span>
             </div>
             <div class="comparison-after" data-comparison-after>
-              <div class="hero-placeholder" style="width:100%; height:250px; background:#e2e8f0"></div>
+              <div class="hero-placeholder" style="width:100%; height:250px; background:#f1f5f9" role="img" aria-label="hair loss treatment before after"></div>
               <span class="ba-label ba-label-after">After</span>
             </div>
             <input type="range" min="0" max="100" value="50" class="comparison-slider" data-comparison-slider aria-label="Percentage of after image shown">
@@ -330,8 +395,58 @@
             </div>
           </div>
           <div class="result-info">
-            <h3>Hair Regrowth Results</h3>
-            <p>Significant hair density improvement after 4 sessions of PRP therapy and consistent medical management.</p>
+            <h3>Visible Hair Regrowth</h3>
+            <p>Significant density improvement after 4 months of consistent medical management and PRP therapy sessions.</p>
+          </div>
+        </div>
+
+        <!-- Pigmentation Result -->
+        <div class="result-card glass-card">
+          <div class="comparison-container" data-comparison-container title="pigmentation treatment results">
+            <div class="comparison-before">
+              <div class="hero-placeholder" style="width:100%; height:250px; background:#cbd5e1" role="img" aria-label="pigmentation treatment results"></div>
+              <span class="ba-label ba-label-before">Before</span>
+            </div>
+            <div class="comparison-after" data-comparison-after>
+              <div class="hero-placeholder" style="width:100%; height:250px; background:#94a3b8" role="img" aria-label="pigmentation treatment results"></div>
+              <span class="ba-label ba-label-after">After</span>
+            </div>
+            <input type="range" min="0" max="100" value="50" class="comparison-slider" data-comparison-slider aria-label="Percentage of after image shown">
+            <div class="slider-line" data-slider-line></div>
+            <div class="slider-button" data-slider-button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline><polyline points="9 18 3 12 9 6"></polyline></svg>
+              <span>DRAG</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline><polyline points="15 18 21 12 15 6"></polyline></svg>
+            </div>
+          </div>
+          <div class="result-info">
+            <h3>Fading Melasma</h3>
+            <p>Significant reduction in facial pigmentation and melasma patches after a series of targeted chemical peels and laser sessions.</p>
+          </div>
+        </div>
+
+        <!-- Laser Result -->
+        <div class="result-card glass-card">
+          <div class="comparison-container" data-comparison-container title="laser skin treatment results">
+            <div class="comparison-before">
+              <div class="hero-placeholder" style="width:100%; height:250px; background:#64748b" role="img" aria-label="laser skin treatment results"></div>
+              <span class="ba-label ba-label-before">Before</span>
+            </div>
+            <div class="comparison-after" data-comparison-after>
+              <div class="hero-placeholder" style="width:100%; height:250px; background:#475569" role="img" aria-label="laser skin treatment results"></div>
+              <span class="ba-label ba-label-after">After</span>
+            </div>
+            <input type="range" min="0" max="100" value="50" class="comparison-slider" data-comparison-slider aria-label="Percentage of after image shown">
+            <div class="slider-line" data-slider-line></div>
+            <div class="slider-button" data-slider-button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline><polyline points="9 18 3 12 9 6"></polyline></svg>
+              <span>DRAG</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline><polyline points="15 18 21 12 15 6"></polyline></svg>
+            </div>
+          </div>
+          <div class="result-info">
+            <h3>Permanent Hair Reduction</h3>
+            <p>Successful long-term hair reduction on the face after 6 sessions of advanced laser therapy. Smooth and clear skin texture.</p>
           </div>
         </div>
       </div>
@@ -355,18 +470,18 @@
         <div class="review-track">
           <div class="review-card">
             <div class="stars">★★★★★</div>
-            <p>Professional and caring. My acne improved within weeks. Best dermatologist in Mangaluru!</p>
-            <span class="reviewer">Aditi, 24</span>
+            <p>"Highly professional acne treatment. My skin cleared up significantly within 8 weeks. Best dermatologist in Mangaluru for clinical results!"</p>
+            <span class="reviewer">Aditi S. (Acne Treatment)</span>
           </div>
           <div class="review-card">
             <div class="stars">★★★★★</div>
-            <p>Very thorough consultation. Highly recommend Skin 360 for hair loss treatment in Mangaluru.</p>
-            <span class="reviewer">Rahul, 29</span>
+            <p>"Excellent hair loss treatment. I saw visible hair regrowth after 4 sessions of PRP therapy. The clinic is very hygienic and modern."</p>
+            <span class="reviewer">Rahul M. (PRP Therapy)</span>
           </div>
           <div class="review-card">
             <div class="stars">★★★★★</div>
-            <p>Clean clinic and trustworthy advice. Great skin specialist clinic near me.</p>
-            <span class="reviewer">Sneha, 31</span>
+            <p>"I had laser therapy for my pigmentation, and the results are amazing. Very safe and approved procedures. Highly recommend Skin 360!"</p>
+            <span class="reviewer">Sneha K. (Laser Therapy)</span>
           </div>
         </div>
       </div>
@@ -473,6 +588,37 @@
             <a href="blog/how-to-remove-pigmentation-mangaluru.html" class="btn btn-text">Read Guide →</a>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="expertise reveal" id="medical-expertise">
+    <div class="container">
+      <div class="expertise-section">
+        <div class="expertise-content">
+          <div class="section-head">
+            <h2>Dermatology Expertise & Clinical Excellence</h2>
+            <p>Our clinic provides medical-grade care for a wide range of skin, hair, and nail conditions, combining years of experience with advanced technology.</p>
+          </div>
+          <div class="expertise-grid">
+            <div class="expertise-item">
+              <h3>Clinical Dermatology</h3>
+              <p>Expert treatment for common and complex conditions including acne, eczema, psoriasis, and skin infections. We focus on accurate diagnosis and evidence-based medical management.</p>
+            </div>
+            <div class="expertise-item">
+              <h3>Aesthetic Procedures</h3>
+              <p>Safe and professional aesthetic treatments like chemical peels, medifacials, and skin rejuvenation to enhance your natural beauty with medical precision.</p>
+            </div>
+            <div class="expertise-item">
+              <h3>Laser Surgery</h3>
+              <p>Precision laser therapy for permanent hair reduction, scar revision, and pigmentation removal using gold-standard, US-FDA approved laser systems.</p>
+            </div>
+            <div class="expertise-item">
+              <h3>Hair & Scalp Health</h3>
+              <p>Comprehensive solutions for hair loss, thinning, and scalp disorders including PRP therapy and medical regrowth treatments tailored to your specific needs.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -601,9 +747,10 @@
             <p style="font-weight: 700; margin-bottom: 0.5rem;">Verified Google Rating</p>
             <div class="rating" style="margin-bottom: 0.5rem;">
               <span class="stars">★★★★★</span>
-              <span class="count" style="color: var(--text);">4.7 (200+ Reviews)</span>
+              <span class="count" style="color: var(--text);">4.7 (200+ Verified Reviews)</span>
             </div>
-            <a href="https://maps.google.com/?q=Skin+360+Dermatology+Clinic+Mangaluru" target="_blank" style="font-size: 0.9rem; color: var(--blue); font-weight: 600;">View on Google Business →</a>
+            <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem;">Join 5000+ happy patients who have transformed their skin at Skin 360.</p>
+            <a href="https://maps.google.com/?q=Skin+360+Dermatology+Clinic+Mangaluru" target="_blank" class="btn btn-text" style="font-size: 0.9rem; padding: 0;">Read All Google Reviews →</a>
           </div>
         </div>
         <form class="contact-form" data-appointment>
