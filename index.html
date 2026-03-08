@@ -88,19 +88,22 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
-        <img src="images (1).jpg" alt="Skin 360 Clinic Logo" class="logo-img" width="40" height="40">
+      <a href="#hero" class="brand">
+        <img src="images (1).jpg" alt="Skin 360 Clinic Logo" class="logo-img" width="45" height="45">
         <span class="logo-text">Skin 360 Clinic</span>
-      </div>
-      <button class="nav-toggle" aria-label="Toggle Navigation" aria-expanded="false">
-        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </button>
-      <nav class="nav" aria-label="Primary">
+      </a>
+      <nav class="nav" aria-label="Primary Navigation">
+        <button class="nav-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
         <ul class="nav-list">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#doctor">Doctor</a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#doctor">About Doctor</a></li>
+          <li><a href="#services">Treatments</a></li>
           <li><a href="#results">Results</a></li>
-          <li><a href="#appointment" class="btn btn-primary">Book Appointment</a></li>
+          <li><a href="#reviews">Testimonials</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#appointment" class="btn btn-primary">Book Now</a></li>
         </ul>
       </nav>
     </div>
@@ -485,27 +488,35 @@
           <a href="https://www.google.com/maps/place/Skin+360+Dermatology+Clinic" target="_blank" class="btn btn-outline" style="margin-top: 1.5rem;">Write a Review</a>
         </div>
       </div>
-      <div class="testimonials-grid">
+      <div class="testimonials-grid" id="testimonial-slider">
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
           <p>"The best dermatologist in Mangaluru for acne treatment. My severe cystic acne cleared up in just 3 months. Dr. Prashanth is highly knowledgeable."</p>
-          <h4 style="margin-top: 1rem;">- Jyothi (Acne Treatment)</h4>
+          <h4>- Jyothi (Acne Treatment)</h4>
         </div>
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
           <p>"Highly recommend Skin 360 for hair loss issues. I saw visible regrowth within 4 months of their specialized hair care therapy. Very professional clinic."</p>
-          <h4 style="margin-top: 1rem;">- Swasthik Anchan (Hair Loss Therapy)</h4>
+          <h4>- Swasthik Anchan (Hair Loss Therapy)</h4>
         </div>
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
           <p>"One of the best doctors in town for laser skin treatments. The fractional CO2 laser results for my scars were better than I ever expected. Thank you!"</p>
-          <h4 style="margin-top: 1rem;">- Swapnil Sudhakar B (Laser Resurfacing)</h4>
+          <h4>- Swapnil Sudhakar B (Laser Resurfacing)</h4>
         </div>
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
           <p>"Excellent results for pigmentation removal. The chemical peels and laser combination worked wonders on my melasma. A truly high-authority clinic."</p>
-          <h4 style="margin-top: 1rem;">- Anita R. (Pigmentation Treatment)</h4>
+          <h4>- Anita R. (Pigmentation Treatment)</h4>
         </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Very happy with the anti-aging treatment. My skin feels much firmer and the fine lines have significantly reduced. The staff is very courteous."</p>
+          <h4>- Megha S. (Anti-Aging)</h4>
+        </div>
+      </div>
+      <div class="slider-nav" id="testimonial-dots">
+        <!-- Dots will be added via JS -->
       </div>
     </div>
   </section>
@@ -547,6 +558,29 @@
           <p>A deep dive into fractional laser technology and its effectiveness in reducing deep acne scarring.</p>
           <a href="blog/laser-treatment-for-acne-scars-mangalore.html" class="btn btn-text">Read Medical Guide →</a>
         </div>
+        <div class="blog-card glass-card">
+          <h3>Anti-Aging Tips for Indian Skin</h3>
+          <p>Expert medical guide on maintaining a youthful glow and addressing specific aging concerns in Indian skin.</p>
+          <a href="blog/anti-aging-tips-for-indian-skin-mangalore.html" class="btn btn-text">Read Medical Guide →</a>
+        </div>
+        <div class="blog-card glass-card">
+          <h3>How to Choose the Best Skin Specialist</h3>
+          <p>Essential tips on selecting the right dermatologist for your medical and aesthetic skin concerns in Mangaluru.</p>
+          <a href="blog/how-to-choose-the-best-skin-specialist-in-mangalore.html" class="btn btn-text">Read Medical Guide →</a>
+        </div>
+        <div class="blog-card glass-card">
+          <h3>Eczema & Allergy Management</h3>
+          <p>Find lasting relief from itching and inflammation with expert clinical care for all allergic skin conditions.</p>
+          <a href="blog/eczema-and-skin-allergy-management-mangalore.html" class="btn btn-text">Read Medical Guide →</a>
+        </div>
+        <div class="blog-card glass-card">
+          <h3>PRP & GFC for Hair Regrowth</h3>
+          <p>The definitive guide to regenerative hair care and its transformative power in restoring hair density.</p>
+          <a href="blog/prp-therapy-for-hair-regrowth-mangalore.html" class="btn btn-text">Read Medical Guide →</a>
+        </div>
+      </div>
+      <div class="blog-cta-bottom" style="text-align: center; margin-top: 3rem;">
+        <a href="#appointment" class="btn btn-outline">Ask the Expert: Book a Consultation</a>
       </div>
     </div>
   </section>
@@ -559,21 +593,39 @@
       </div>
       <div class="faq-accordion">
         <div class="faq-card">
-          <button class="faq-question">How do I book an appointment? <span>+</span></button>
+          <button class="faq-question">What skin and hair treatments are available at Skin 360? <span>+</span></button>
           <div class="faq-answer">
-            <p>You can book an appointment by calling us at +91 97382 87177, via HealthPlix online booking, or through WhatsApp.</p>
+            <p>We provide a comprehensive range of medical and aesthetic dermatology services, including advanced acne and scar treatment, hair loss therapies (PRP/GFC), laser hair removal, pigmentation correction, anti-aging procedures, and clinical management of skin diseases like eczema and psoriasis.</p>
           </div>
         </div>
         <div class="faq-card">
-          <button class="faq-question">What are the clinic timings? <span>+</span></button>
+          <button class="faq-question">Who is the lead dermatologist at the clinic? <span>+</span></button>
           <div class="faq-answer">
-            <p>Skin 360 Clinic opens at 10:30 AM, Monday to Saturday. We recommend booking in advance to ensure your slot.</p>
+            <p>The clinic is led by Dr. Prashanth R Kamath (MD Dermatology), a senior skin specialist with over 12 years of clinical experience and a track record of treating 5000+ patients in Mangaluru.</p>
           </div>
         </div>
         <div class="faq-card">
-          <button class="faq-question">Where is the clinic located? <span>+</span></button>
+          <button class="faq-question">How can I book an appointment with Dr. Prashanth? <span>+</span></button>
           <div class="faq-answer">
-            <p>We are located in the Sai Sharada Building, Near Sharada Vidyalaya, Kodailbail, Mangaluru, Karnataka 575003.</p>
+            <p>You can book an appointment by calling us directly at +91 97382 87177, messaging us on WhatsApp, or using our online booking link via HealthPlix available on this website.</p>
+          </div>
+        </div>
+        <div class="faq-card">
+          <button class="faq-question">Are the laser treatments safe for Indian skin tones? <span>+</span></button>
+          <div class="faq-answer">
+            <p>Yes, absolutely. We use US-FDA approved laser technologies specifically calibrated for safety and efficacy on Indian skin types (Fitzpatrick IV-VI). All procedures are supervised by our expert dermatologist to ensure maximum safety.</p>
+          </div>
+        </div>
+        <div class="faq-card">
+          <button class="faq-question">Where is the clinic located in Mangaluru? <span>+</span></button>
+          <div class="faq-answer">
+            <p>Skin 360 Dermatology Clinic is located in the Sai Sharada Building, conveniently situated near Sharada Vidyalaya in the Kodailbail area of Mangaluru.</p>
+          </div>
+        </div>
+        <div class="faq-card">
+          <button class="faq-question">What are the clinic timings and working days? <span>+</span></button>
+          <div class="faq-answer">
+            <p>The clinic is open from Monday to Saturday, starting at 10:30 AM. We recommend booking in advance as slots tend to fill up quickly. The clinic remains closed on Sundays.</p>
           </div>
         </div>
       </div>
@@ -634,31 +686,51 @@
     <div class="container">
       <div class="section-head">
         <h2>Visit Skin 360 Clinic in Mangaluru</h2>
-        <p>Located in the heart of Kodailbail, conveniently near Sharada Vidyalaya.</p>
+        <p>Located in the heart of Kodailbail, conveniently near Sharada Vidyalaya. Serving patients from all across Dakshina Kannada.</p>
       </div>
       <div class="location-grid-main glass-card">
         <div class="location-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.3142148114084!2d74.8427!3d12.8764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a467f6e0001%3A0x6a3890f555555555!2sKodailbail%2C%20Mangaluru%2C%20Karnataka%20575003!5e0!3m2!1sen!2sin!4v1612345678901!5m2!1sen!2sin" width="100%" height="450" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe title="Skin 360 Clinic Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.4758!2d74.843!3d12.875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a!2sSkin+360+Dermatology+Clinic!5e0!3m2!1sen!2sin!4v1" width="100%" height="450" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="location-details">
           <h3>Skin 360 Dermatology Clinic</h3>
           <p class="address">📍 Sai Sharada Building, Near Sharada Vidyalaya, Kodailbail, Mangaluru, Karnataka 575003</p>
-          <p class="phone">📞 <a href="tel:+919738287177">+91 97382 87177</a></p>
-          <p class="email">📧 <a href="mailto:info@skin360clinic.com">info@skin360clinic.com</a></p>
+          <div class="contact-methods" style="margin: 2rem 0;">
+            <p class="phone">📞 <a href="tel:+919738287177" style="font-size: 1.4rem; font-weight: 800; color: var(--blue);">+91 97382 87177</a></p>
+            <p class="email">📧 <a href="mailto:info@skin360clinic.com">info@skin360clinic.com</a></p>
+          </div>
           
-          <div class="nearby-locations" style="margin-top: 2rem;">
-            <h4>Serving Patients From:</h4>
-            <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; padding-left: 1.2rem; color: var(--muted);">
-              <li>Kodailbail</li>
+          <div class="nearby-locations" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--blue-50-light);">
+            <h4 style="margin-bottom: 1rem;">Serving Patients From:</h4>
+            <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; padding-left: 1.2rem; color: var(--muted); font-weight: 500;">
+              <li>Kodailbail & Bejai</li>
+              <li>Kadri & Falnir</li>
               <li>Hampankatta</li>
-              <li>Bejai</li>
-              <li>Kadri</li>
-              <li>Falnir</li>
-              <li>Surathkal</li>
+              <li>Surathkal & Ullal</li>
+              <li>Bantwal & Puttur</li>
+              <li>Udupi & Manipal</li>
             </ul>
           </div>
           
-          <a href="https://www.google.com/maps?q=12.8764,74.8427" target="_blank" class="btn btn-outline" style="margin-top: 2rem; width: 100%;">Get Directions on Google Maps</a>
+          <div class="location-ctas" style="display: grid; gap: 1rem; margin-top: 2.5rem;">
+            <a href="https://maps.google.com/?q=Skin+360+Dermatology+Clinic+Mangaluru" target="_blank" class="btn btn-primary" style="justify-content: center;">Get Directions on Google Maps</a>
+            <a href="tel:+919738287177" class="btn btn-outline" style="justify-content: center;">Call for Appointment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner reveal">
+    <div class="container">
+      <div class="cta-banner-inner glass-card">
+        <div class="cta-content">
+          <h2>Book Your Dermatology Consultation Today</h2>
+          <p>Take the first step towards healthy, radiant skin. Expert care by Dr. Prashanth R Kamath is just a click away.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="#appointment" class="btn btn-primary">Book Appointment</a>
+          <a href="https://wa.me/919738287177" class="btn btn-whatsapp">WhatsApp Consultation</a>
         </div>
       </div>
     </div>
