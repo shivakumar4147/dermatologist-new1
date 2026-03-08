@@ -30,7 +30,7 @@ const revealOnScroll = new IntersectionObserver((entries, observer) => {
 
 // Optimized Reveal Setup for all major components
 const initReveal = () => {
-  const elements = document.querySelectorAll('section, .glass-card, .gallery-item, .trust-item, .doctor-profile-card, .testimonial-card, .infra-card, .result-card, .blog-card');
+  const elements = document.querySelectorAll('section, .glass-card, .gallery-item, .trust-item, .doctor-profile-card, .google-review-card, .infra-card, .result-card, .blog-card');
   elements.forEach(el => {
     el.classList.add('reveal');
     revealOnScroll.observe(el);
@@ -39,7 +39,7 @@ const initReveal = () => {
 initReveal();
 
 // Staggered Animations for grids
-const grids = document.querySelectorAll('.services-grid, .gallery-grid, .testimonials-grid');
+const grids = document.querySelectorAll('.services-grid, .gallery-grid, .google-reviews-slider');
 grids.forEach(grid => {
   const children = Array.from(grid.children);
   children.forEach((child, index) => {
@@ -101,41 +101,13 @@ document.querySelectorAll('.faq-question').forEach(button => {
   });
 });
 
-// Testimonial Slider Dots Logic
+// Testimonial Slider Dots Logic (Removed as we are using Elfsight widget)
+/*
 const initTestimonialSlider = () => {
-  const slider = document.getElementById('testimonial-slider');
-  const dotsContainer = document.getElementById('testimonial-dots');
-  
-  if (!slider || !dotsContainer) return;
-
-  const cards = slider.querySelectorAll('.testimonial-card');
-  
-  // Create dots
-  cards.forEach((_, index) => {
-    const dot = document.createElement('div');
-    dot.classList.add('slider-dot');
-    if (index === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => {
-      slider.scrollTo({
-        left: cards[index].offsetLeft - slider.offsetLeft,
-        behavior: 'smooth'
-      });
-    });
-    dotsContainer.appendChild(dot);
-  });
-
-  // Update active dot on scroll
-  slider.addEventListener('scroll', () => {
-    const scrollPos = slider.scrollLeft;
-    const cardWidth = cards[0].offsetWidth + 32; // card + gap
-    const activeIndex = Math.round(scrollPos / cardWidth);
-    
-    dotsContainer.querySelectorAll('.slider-dot').forEach((dot, index) => {
-      dot.classList.toggle('active', index === activeIndex);
-    });
-  });
+  ...
 };
 initTestimonialSlider();
+*/
 
 const comparisonContainers = document.querySelectorAll('.comparison-container');
 comparisonContainers.forEach(container => {
