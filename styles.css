@@ -479,21 +479,68 @@ img {
 
 .doctor-profile-card {
   display: grid;
-  grid-template-columns: 350px 1fr;
-  gap: 4rem;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 3rem;
   background: var(--white);
-  padding: 3.5rem;
+  padding: 3rem;
   border-radius: var(--radius-lg);
-  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 20px 40px var(--shadow);
   border: 1px solid var(--blue-50-light);
   align-items: center;
 }
 
+.doctor-profile-image-container {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+}
+
 .doctor-profile-image {
   width: 100%;
-  border-radius: 20px;
-  box-shadow: 10px 10px 30px var(--shadow);
-  border: 2px solid var(--blue-100-light);
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.doctor-profile-image-container:hover .doctor-profile-image {
+  transform: scale(1.05);
+}
+
+.doctor-stats-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(14, 165, 233, 0.9), transparent);
+  padding: 2rem 1.5rem 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item strong {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.stat-item span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+@media (max-width: 992px) {
+  .doctor-profile-card {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
 }
 
 .doctor-profile-content h2 {
@@ -640,10 +687,19 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 100%;
   height: 100%;
   overflow: hidden;
   z-index: 2;
+  pointer-events: none;
+}
+
+.comparison-before {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .comparison-after .comparison-img {
@@ -1011,22 +1067,28 @@ img {
 
 .blog {
   padding: 10rem 0; /* Premium spaciousness */
+  background: var(--white);
 }
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
+}
+.blog-card {
+  padding: 2.5rem;
+  height: 100%;
 }
 .blog-card h3 {
-  color: var(--blue);
+  color: var(--text);
   margin-bottom: 1rem;
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: 1.4rem;
+  line-height: 1.3;
 }
 .blog-card p {
   color: var(--muted);
   margin-bottom: 1.5rem;
+  font-size: 0.95rem;
 }
 
 .blog-image {
@@ -1882,27 +1944,55 @@ p {
 }
 .infrastructure-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
   margin-top: 3rem;
 }
+
 .infra-card {
-  text-align: center;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--shadow);
+  transition: transform 0.3s ease;
+  border: 1px solid var(--blue-50-light);
 }
+
+.infra-card:hover {
+  transform: translateY(-10px);
+}
+
 .infra-image {
-  width: 100%;
-  aspect-ratio: 16/9;
-  background: var(--blue-50-light);
-  border-radius: 20px;
-  margin-bottom: 1.5rem;
+  height: 220px;
   overflow: hidden;
 }
-.infra-card h3 {
-  color: var(--text);
-  margin-bottom: 0.5rem;
+
+.infra-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
+
+.infra-card:hover .infra-image img {
+  transform: scale(1.1);
+}
+
+.infra-card h3 {
+  padding: 1.5rem 1.5rem 0.5rem;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
 .infra-card p {
+  padding: 0 1.5rem 1.5rem;
+  font-size: 0.95rem;
   color: var(--muted);
+  line-height: 1.6;
+}
+
+.clinic-infrastructure {
+  background: #f1f5f9;
 }
 
 .expertise-section {

@@ -23,7 +23,7 @@ const revealOnScroll = new IntersectionObserver((entries, observer) => {
 
 // Optimized Reveal Setup for all major components
 const initReveal = () => {
-  const elements = document.querySelectorAll('section, .glass-card, .gallery-item, .trust-item, .doctor-profile-card, .testimonial-card');
+  const elements = document.querySelectorAll('section, .glass-card, .gallery-item, .trust-item, .doctor-profile-card, .testimonial-card, .infra-card');
   elements.forEach(el => {
     el.classList.add('reveal');
     revealOnScroll.observe(el);
@@ -93,7 +93,6 @@ document.querySelectorAll('.faq-question').forEach(button => {
   });
 });
 
-// Before/After Slider logic
 const comparisonContainers = document.querySelectorAll('.comparison-container');
 comparisonContainers.forEach(container => {
   const slider = container.querySelector('.comparison-slider');
@@ -102,10 +101,12 @@ comparisonContainers.forEach(container => {
   if (slider && afterImage) {
     const updateSlider = () => {
       const value = slider.value;
+      // Inset clip-path logic: inset(top right bottom left)
+      // When value is 0, we see all of After (left is 0)
+      // When value is 100, we see none of After (left is 100)
       afterImage.style.clipPath = `inset(0 0 0 ${value}%)`;
       container.style.setProperty('--slider-pos', `${value}%`);
       
-      // Update line and button position
       const sliderLine = container.querySelector('.slider-line');
       const sliderButton = container.querySelector('.slider-button');
       if (sliderLine) sliderLine.style.left = `${value}%`;
@@ -115,7 +116,8 @@ comparisonContainers.forEach(container => {
     slider.addEventListener('input', updateSlider);
     slider.addEventListener('change', updateSlider);
     
-    // Initial set
+    // Set initial position
+    window.addEventListener('load', updateSlider);
     updateSlider();
   }
 });
