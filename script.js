@@ -8,34 +8,38 @@ if (navToggle && navList) {
 }
 const observerOptions = {
   root: null,
-  rootMargin: '0px',
+  rootMargin: '0px 0px -50px 0px',
   threshold: 0.15
 }
 
-const observer = new IntersectionObserver((entries, observer) => {
+const revealOnScroll = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('in')
-      observer.unobserve(entry.target)
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
     }
-  })
+  });
 }, observerOptions)
 
-// Optimized Reveal Setup
-document.querySelectorAll('section, .service-card, .why-item, .review-card, .doctor-card').forEach(el => {
-  el.classList.add('reveal')
-  observer.observe(el)
-})
+// Optimized Reveal Setup for all major components
+const initReveal = () => {
+  const elements = document.querySelectorAll('section, .glass-card, .gallery-item, .trust-item, .doctor-profile-card, .testimonial-card');
+  elements.forEach(el => {
+    el.classList.add('reveal');
+    revealOnScroll.observe(el);
+  });
+}
+initReveal();
 
 // Staggered Animations for grids
-const grids = document.querySelectorAll('.service-grid, .why-grid, .location-grid')
+const grids = document.querySelectorAll('.services-grid, .gallery-grid, .testimonials-grid');
 grids.forEach(grid => {
-  const children = grid.children
-  Array.from(children).forEach((child, index) => {
-    child.classList.add('reveal-stagger')
-    child.style.setProperty('--stagger-index', index)
-  })
-})
+  const children = Array.from(grid.children);
+  children.forEach((child, index) => {
+    child.classList.add('reveal-stagger');
+    child.style.setProperty('--stagger-index', index);
+  });
+});
 
 // Image Protection: Prevent right-click and drag
 const protectImages = () => {
@@ -102,19 +106,6 @@ document.querySelectorAll('.faq-question').forEach(button => {
     }
   });
 });
-
-// Reveal Animations on Scroll
-const revealElements = document.querySelectorAll('.reveal');
-const revealOnScroll = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-revealElements.forEach(el => revealOnScroll.observe(el));
 
 // Before/After Slider logic
 const comparisonContainers = document.querySelectorAll('.comparison-container');

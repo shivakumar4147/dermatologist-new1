@@ -19,7 +19,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
@@ -83,6 +83,13 @@
     <a href="#appointment" class="btn btn-outline">📅 Book Now</a>
   </div>
 
+  <!-- Floating Desktop/Mobile Actions -->
+  <div class="floating-actions">
+    <a href="https://wa.me/919738287177" class="floating-btn whatsapp" title="WhatsApp Consultation">💬</a>
+    <a href="tel:+919738287177" class="floating-btn call" title="Call Now">📞</a>
+    <a href="#appointment" class="floating-btn book" title="Book Appointment">📅</a>
+  </div>
+
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -107,14 +114,14 @@
           <span class="cert-badge" style="background: var(--blue-50-light); color: var(--blue); border: 1px solid var(--blue-100-light);">⭐ 4.7 Google Rating</span>
           <span class="cert-badge" style="background: var(--green-soft); color: var(--green-med); border: 1px solid rgba(16, 185, 129, 0.2);">228+ Verified Reviews</span>
         </div>
-        <h1>Best Dermatologist in Mangaluru – Skin 360 Clinic</h1>
-        <p class="subhead">Advanced skin and hair treatments with expert diagnosis by Dr. Prashanth R Kamath. 9+ years of clinical excellence in Kodailbail, Mangaluru.</p>
+        <h1>Advanced Skin & Hair Care by Expert Dermatologists</h1>
+        <p class="subhead">Trusted dermatology clinic helping patients achieve healthy skin and hair. 9+ years of clinical excellence in Kodailbail, Mangaluru.</p>
         
-        <div class="trust-badges" style="margin-top: 2rem;">
-          <div class="badge"><span class="emoji">👨‍⚕️</span><span>9+ Years Exp</span></div>
-          <div class="badge"><span class="emoji">🏥</span><span>Kodailbail Clinic</span></div>
-          <div class="badge"><span class="emoji">🔬</span><span>Advanced Skin Care</span></div>
-          <div class="badge"><span class="emoji">🏆</span><span>Highly Trusted</span></div>
+        <div class="trust-badges-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem;">
+          <div class="badge"><span class="emoji">⭐</span><span>4.7 Rating (228+ Patients)</span></div>
+          <div class="badge"><span class="emoji">👨‍⚕️</span><span>9+ Years Experience</span></div>
+          <div class="badge"><span class="emoji">🏥</span><span>Trusted Clinic in Mangaluru</span></div>
+          <div class="badge"><span class="emoji">🔬</span><span>Advanced Technology</span></div>
         </div>
 
         <div class="hero-cta" style="margin-top: 2.5rem;">
@@ -123,38 +130,32 @@
         </div>
       </div>
       <div class="hero-media">
-        <img src="images.jpg" alt="Dr. Prashanth R Kamath - Skin Specialist in Mangaluru" class="doctor-hero-img">
+        <div class="hero-image-wrapper">
+          <img src="images.jpg" alt="Dr. Prashanth R Kamath - Skin Specialist in Mangaluru" class="doctor-hero-img">
+          <div class="experience-badge">9+ Years<br>Experience</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="trust-signals reveal">
+  <section class="trust-bar">
     <div class="container">
-      <div class="trust-signals-grid">
-        <div class="trust-signal-item">
-          <div class="trust-signal-icon">⭐</div>
-          <h4>4.7/5 Rating</h4>
-          <p>228+ Verified Reviews</p>
+      <div class="trust-bar-inner">
+        <div class="trust-item">
+          <span class="trust-icon">✔</span>
+          <span class="trust-text">228+ Happy Patients</span>
         </div>
-        <div class="trust-signal-item">
-          <div class="trust-signal-icon">👨‍⚕️</div>
-          <h4>9+ Years Exp</h4>
-          <p>Clinical Excellence</p>
+        <div class="trust-item">
+          <span class="trust-icon">✔</span>
+          <span class="trust-text">9+ Years Experience</span>
         </div>
-        <div class="trust-signal-item">
-          <div class="trust-signal-icon">🔬</div>
-          <h4>Skin & Hair Expert</h4>
-          <p>Advanced Treatments</p>
+        <div class="trust-item">
+          <span class="trust-icon">✔</span>
+          <span class="trust-text">Certified Clinic</span>
         </div>
-        <div class="trust-signal-item">
-          <div class="trust-signal-icon">🤝</div>
-          <h4>Patient-First</h4>
-          <p>Trusted Care in town</p>
-        </div>
-        <div class="trust-signal-item">
-          <div class="trust-signal-icon">📍</div>
-          <h4>Kodailbail</h4>
-          <p>Near Sharada Vidyalaya</p>
+        <div class="trust-item">
+          <span class="trust-icon">✔</span>
+          <span class="trust-text">Advanced Technology</span>
         </div>
       </div>
     </div>
@@ -348,6 +349,33 @@
     </div>
   </section>
 
+  <section class="gallery reveal" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <h2>Clinic Gallery</h2>
+        <p>A glimpse into our professional and comfortable clinical environment in Mangaluru.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images.jpg" alt="Clinic Interior" class="gallery-img">
+          <div class="gallery-overlay">Clinic Interior</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images (1).jpg" alt="Consultation Room" class="gallery-img">
+          <div class="gallery-overlay">Consultation Room</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images.jpg" alt="Treatment Equipment" class="gallery-img">
+          <div class="gallery-overlay">Modern Equipment</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images (1).jpg" alt="Patient Waiting Area" class="gallery-img">
+          <div class="gallery-overlay">Waiting Area</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="patient-trust reveal" id="reviews">
     <div class="container">
       <div class="section-head">
@@ -405,25 +433,25 @@
 
   <section class="appointment reveal" id="appointment">
     <div class="container">
-      <div class="appointment-grid glass-card">
+      <div class="appointment-grid glass-card" style="padding: 4rem;">
         <div class="appointment-info">
-          <h3>Book Your Consultation</h3>
-          <p>Expert skin and hair care by Dr. Prashanth R Kamath. Serving Mangaluru with 9+ years of excellence.</p>
+          <h2 style="text-align: left; margin-top: 0;">Book Your Dermatology Consultation Today</h2>
+          <p style="font-size: 1.1rem; color: var(--muted); margin-top: 1rem;">Expert skin and hair care by Dr. Prashanth R Kamath. Serving Mangaluru with 9+ years of clinical excellence.</p>
           
-          <div class="appointment-actions" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
-            <a href="tel:+919738287177" class="btn btn-primary" style="justify-content: center;">📞 Call: +91 97382 87177</a>
-            <a href="https://wa.me/919738287177" class="btn btn-whatsapp" style="justify-content: center; background: #25D366; color: white; border: none;">💬 WhatsApp Booking</a>
-            <a href="#" class="btn btn-outline" style="justify-content: center;">📅 HealthPlix Online Booking</a>
+          <div class="appointment-actions">
+            <a href="#appointment-form" class="btn btn-primary" style="justify-content: center; padding: 1.2rem;">📅 Book Appointment</a>
+            <a href="tel:+919738287177" class="btn btn-outline" style="justify-content: center; padding: 1.2rem;">📞 Call Now: +91 97382 87177</a>
+            <a href="https://wa.me/919738287177" class="btn btn-whatsapp" style="justify-content: center; padding: 1.2rem; background: #25D366; color: white; border: none;">💬 WhatsApp Consultation</a>
           </div>
           
-          <div class="clinic-hours" style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--blue-100-light);">
-            <h4 style="margin-bottom: 0.5rem;">Clinic Hours:</h4>
-            <p style="color: var(--muted);">Opens at 10:30 AM (Mon - Sat)</p>
+          <div class="clinic-hours" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--blue-100-light);">
+            <h4 style="margin-bottom: 0.8rem; color: var(--text);">Clinic Hours:</h4>
+            <p style="color: var(--muted); margin-bottom: 0.4rem;">Monday - Saturday: Opens at 10:30 AM</p>
             <p style="color: var(--muted);">Sunday: Closed</p>
           </div>
         </div>
         
-        <form class="contact-form">
+        <form class="contact-form" id="appointment-form" style="background: var(--bg); border: 1px solid var(--blue-100-light);">
           <div class="form-row">
             <label>Your Name</label>
             <input type="text" placeholder="Enter your full name" required>
@@ -447,7 +475,7 @@
             <label>Preferred Date</label>
             <input type="date">
           </div>
-          <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">Request Appointment</button>
+          <button type="submit" class="btn btn-primary" style="margin-top: 1.5rem; padding: 1.2rem;">Request Appointment</button>
         </form>
       </div>
     </div>
