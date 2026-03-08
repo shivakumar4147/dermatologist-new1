@@ -87,6 +87,22 @@ document.querySelectorAll('a[href^="tel:"]').forEach(link => {
   });
 });
 
+// FAQ Accordion Logic
+document.querySelectorAll('.faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const card = button.parentElement;
+    const isActive = card.classList.contains('active');
+    
+    // Close all other cards
+    document.querySelectorAll('.faq-card').forEach(c => c.classList.remove('active'));
+    
+    // Toggle current card
+    if (!isActive) {
+      card.classList.add('active');
+    }
+  });
+});
+
 // Reveal Animations on Scroll
 const revealElements = document.querySelectorAll('.reveal');
 const revealOnScroll = new IntersectionObserver((entries, observer) => {
@@ -96,24 +112,33 @@ const revealOnScroll = new IntersectionObserver((entries, observer) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
 revealElements.forEach(el => revealOnScroll.observe(el));
 
 // Before/After Slider logic
-const comparisonContainers = document.querySelectorAll('[data-comparison-container]');
+const comparisonContainers = document.querySelectorAll('.comparison-container');
 comparisonContainers.forEach(container => {
-  const slider = container.querySelector('[data-comparison-slider]');
-  const afterImage = container.querySelector('[data-comparison-after]');
-  const line = container.querySelector('[data-slider-line]');
-  const button = container.querySelector('[data-slider-button]');
+  const slider = container.querySelector('.comparison-slider');
+  const afterImage = container.querySelector('.comparison-after');
 
-  if (slider && afterImage && line && button) {
-    slider.addEventListener('input', (e) => {
-      const value = e.target.value;
+  if (slider && afterImage) {
+    const updateSlider = () => {
+      const value = slider.value;
       afterImage.style.clipPath = `inset(0 0 0 ${value}%)`;
-      line.style.left = `${value}%`;
-      button.style.left = `${value}%`;
-    });
+      container.style.setProperty('--slider-pos', `${value}%`);
+      
+      // Update line and button position
+      const sliderLine = container.querySelector('.slider-line');
+      const sliderButton = container.querySelector('.slider-button');
+      if (sliderLine) sliderLine.style.left = `${value}%`;
+      if (sliderButton) sliderButton.style.left = `${value}%`;
+    };
+
+    slider.addEventListener('input', updateSlider);
+    slider.addEventListener('change', updateSlider);
+    
+    // Initial set
+    updateSlider();
   }
 });
