@@ -55,20 +55,6 @@ protectImages()
 const observerProtection = new MutationObserver(() => protectImages())
 observerProtection.observe(document.body, { childList: true, subtree: true })
 
-// Review Slider Logic
-const slider = document.querySelector('[data-slider]')
-if (slider) {
-  const track = slider.querySelector('.review-track')
-  const cards = Array.from(track.children)
-  let index = 0
-  
-  setInterval(() => {
-    index = (index + 1) % cards.length
-    track.style.transform = `translateX(-${index * 100}%)`
-    track.style.transition = 'transform 600ms cubic-bezier(0.4, 0, 0.2, 1)'
-  }, 4000)
-}
-
 const form = document.querySelector('[data-appointment]')
 if (form) {
   form.addEventListener('submit', e => {
